@@ -70,7 +70,7 @@ function checkWin(){
   const checkCrossWinDiag = contains(0,4,8, crossIndices )
   const checkCrossWinDiag2 = contains(2,4,6, crossIndices  )
   const checkCrossWinvert1 = contains(3,4,5, crossIndices )
-  const checkCrossWinvert3= contains(1,4,7, noughtIndices )
+  const checkCrossWinvert3= contains(1,4,7, crossIndices  )
   const checkCrossWinmiddle = contains(0,3,6, crossIndices )
   const checkCrossWinnvert2 = contains(2,5,8, crossIndices )
 
