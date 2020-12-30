@@ -55,8 +55,7 @@ function checkWin(){
 
   let noughtIndices = gridArr.map((e, i) => e === 'O' ? i : '').filter(String);
   let crossIndices = gridArr.map((e, i) => e === 'X' ? i : '').filter(String);
-  console.log(typeof noughtIndices );
-  console.log(noughtIndices );
+
   //check index values for winning noughts
   const checkWinHorizontal = contains(0,1,2, noughtIndices )
   const checkWinDiag = contains(0,4,8, noughtIndices )
@@ -74,19 +73,19 @@ function checkWin(){
   const checkCrossWinmiddle = contains(0,3,6, crossIndices )
   const checkCrossWinnvert2 = contains(2,5,8, crossIndices )
 
-  if (checkWinHorizontal || checkWinDiag || checkWinDiag2 || checkWinvert1 || checkWinnvert2  || checkWinmiddle || checkWinvert3 === true){
+
+  if (checkWinHorizontal || checkWinDiag || checkWinDiag2 || checkWinvert1 || checkWinnvert2  || checkWinmiddle || checkWinvert3=== true){
     alert ("Noughts win");
     this.Reset();
   }
 
-  if (checkCrossWinHorizontal|| checkCrossWinDiag || checkCrossWinDiag2|| checkCrossWinvert3 || checkCrossWinvert1 || checkCrossWinmiddle  || checkCrossWinnvert2 === true){
+  if (checkCrossWinHorizontal ||  checkCrossWinDiag || checkCrossWinDiag2 || checkCrossWinvert1  || checkCrossWinvert3|| checkCrossWinmiddle || checkCrossWinnvert2 === true){
     alert ("Crosses win");
     this.Reset();
   }
   if(gridArr.every(function(element) {return typeof element === 'string';})
-  && checkWinHorizontal && checkWinDiag && checkWinvert1 && checkWinnvert2  && checkWinmiddle &&checkWinvert3&&
-    checkCrossWinHorizontal&& checkCrossWinDiag &&checkCrossWinvert3 && checkCrossWinvert1 &&checkCrossWinmiddle  && checkCrossWinnvert2 === false
-  )
+    &&!checkWinHorizontal && !checkWinDiag && !checkWinDiag2 && !checkWinvert1 && !checkWinnvert2  && !checkWinmiddle && !checkWinvert3
+    &&!checkCrossWinHorizontal&& !checkCrossWinDiag &&  !checkCrossWinDiag2&&  !checkCrossWinvert1  &&  !checkCrossWinvert3&& !checkCrossWinmiddle && !checkCrossWinnvert2)
   {
     alert ("DRAW");
     this.Reset();
