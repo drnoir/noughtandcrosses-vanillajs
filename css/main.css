@@ -1,43 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{
-    background:green;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(51,170,68,1) 35%, rgba(6,100,46,1) 100%);;
+    font-family: 'Montserrat', sans-serif;
 }
 h2{
-    font-family: monospace;
-    font-size:2.5em;
+    font-size:2em;
     text-align: center;
     color:white;
 }
 
+.intro{
+    text-align: center;
+    font-size:1em;
+    color:white;
+    width:600px;
+    margin:auto;
+    margin-bottom:2em;
+}
+
+a{
+    color:black;
+    font-weight: bold;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-auto-rows: 150px;
-    width:450px;
+    grid-template-columns: 200px 200px 200px;
+    grid-auto-rows: 200px;
+    width:600px;
     margin:auto;
-    background:white;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .box{
     border:solid 1px black;
-    background:white;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .nought{
-    width:105px;
-    height:105px;
-    border:solid red 1px;
-    background:red;
+    width:150px;
+    height:150px;
+    border:solid black 1px;
+    background:black;
     border-radius:50%;
     margin:auto;
     margin-top:0.5em;
+    background-color: black;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
+
 
 .cross{
     display: inline-block;
-    width: 130px;
-    height:130px;
-    border: 10px solid blue;
+    width: 180px;
+    height:180px;
+    border: 10px solid black;
     background:
-            linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 43%,#fff 45%,#fff 55%,rgba(0,0,0,0) 57%,rgba(0,0,0,0) 100%),
-            linear-gradient(135deg, blue 0%,blue 43%,#fff 45%,#fff 55%, blue 57%,blue 100%);
+            linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 43%,#f5f7fa 45%,#f5f7fa 55%,rgba(0,0,0,0) 57%,rgba(0,0,0,0) 100%),
+            linear-gradient(135deg, black 0%,black  43%,#f5f7fa 45%,#f5f7fa 55%, black  57%,black  100%);
 }

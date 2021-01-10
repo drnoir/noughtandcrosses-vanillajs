@@ -25,37 +25,45 @@ const gridArr = [1,2,3,4,5,6,7,8,9];
 
 function clickBox(event,num){
   this.addShape(num);
-  this.checkGameState(num);
-}
-
-function checkGameState(num){
-  const gridArrIndex = gridArr.indexOf(num);
-  if (naught===true){
-    gridArr.splice(gridArrIndex,1,'O')
-    console.log("current state"+gridArr,'num index'+gridArrIndex);
-    naught=false;
-  }
-  else{
-    gridArr.splice(gridArrIndex,1,'X')
-    console.log("current state"+gridArr,'num index'+gridArrIndex);
-    naught=true;
-  }
-  this.checkWin();
 }
 
 function addShape(num){
   console.log(num);
   const box = document.getElementById('box'+num);
+  const checkCross = box.classList.contains("cross");
+  const checkNought = box.classList.contains("nought");
+  const gridArrIndex = gridArr.indexOf(num);
+
   switch (naught){
     case true:
-      const newNaught =document.createElement('div');
-      box.appendChild(newNaught)
-      box.classList.add("nought");
+      if (!checkCross && !checkNought) {
+        const newNaught = document.createElement('div');
+        box.appendChild(newNaught)
+        box.classList.add("nought");
+        gridArr.splice(gridArrIndex,1,'O')
+    console.log("current state"+gridArr,'num index'+gridArrIndex);
+    naught=false;
+    this.checkWin();
+      }
+      else {
+        alert("You cant add a shape here!");
+        naught=true;
+      }
       break;
     case false:
-      const newCross = document.createElement("div");
-      box.appendChild(newCross);
-      box.classList.add("cross");
+      if (!checkCross && !checkNought) {
+        const newCross = document.createElement("div");
+        box.appendChild(newCross);
+        box.classList.add("cross");
+        gridArr.splice(gridArrIndex,1,'X')
+        console.log("current state"+gridArr,'num index'+gridArrIndex);
+        naught=true;
+        this.checkWin();
+      }
+      else {
+        alert("You can't add a shape here!");
+        naught=false;
+      }
       break;
     default:
       console.log("something went wrong");
