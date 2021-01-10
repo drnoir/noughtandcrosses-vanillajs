@@ -4,6 +4,8 @@ using vanilla js. In this expereriment I wanted to develop a simple version of t
 noughts and crosses or tic-tac-toe from scratch. I wanted to try and see 
 how I get this to work using arrays and indexing checking in js.
 
+![alt text](https://github.com/drnoir/noughtandcrosses-vanillajs/blob/main/preview.jpg?raw=true)
+
 The game board is represented as an array 
 const gridArr = [1,2,3,4,5,6,7,8,9];
 
